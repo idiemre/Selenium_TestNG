@@ -14,38 +14,41 @@ public class C04_NegativeLoginTesti {
 
     @Test
     public void yanlisEmailTesti(){
+        qualitydemyPage=new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("mehmet@abc.com");
         qualitydemyPage.passwordKutusu.sendKeys("31488081");
         qualitydemyPage.loginButonu.submit();
 
-        Assert.assertFalse(qualitydemyPage.basariliGirisCoursesLinki.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
     }
 
     @Test
     public void yanlisSifreTesti(){
+        qualitydemyPage=new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("user_1106147@login.com");
         qualitydemyPage.passwordKutusu.sendKeys("3148808fd1");
         qualitydemyPage.loginButonu.submit();
 
-        Assert.assertFalse(qualitydemyPage.basariliGirisCoursesLinki.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
     }
 
 
     @Test
     public void yanlisEmailSifreTesti(){
+        qualitydemyPage=new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("mehmet@abc.com");
         qualitydemyPage.passwordKutusu.sendKeys("314880slfshl81");
-        qualitydemyPage.loginButonu.click();
+        qualitydemyPage.loginButonu.submit();
 
-        Assert.assertFalse(qualitydemyPage.basariliGirisCoursesLinki.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
     }
 
