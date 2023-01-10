@@ -27,7 +27,7 @@ public class C03_SwitchingWindows {
 
         Assert.assertEquals(expectedYazi,actualYazi);
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
 
 
     }

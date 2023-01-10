@@ -6,12 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C03_NutellaTesti {
 
 
 
-    @Test
+    @Test(groups = "minireg1")
     public void test01(){
         // amazon anasayfaya gidin
         // nutella icin arama yapin

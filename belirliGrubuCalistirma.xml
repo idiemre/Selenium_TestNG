@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="grup calistirma">
+    <test name="istenen grubu calistirma">
+        <!-- istenen bir grubu calistirmak için
+        öncelikle o gruptaki test method'larının işaretlenmiş olması gerekir
+       Calistirmaya gelindiğinde iki şeyi belirtmemiz gerekir
+        1- çalışacak test method'ları nerede ?
+        2- çalışacak grup ismi ne ?
+        Bu iki bilgiyi vermek için 2 hiyerarşi oluşturmamız gerekir
+        -->
+        <groups>
+            <run>
+                <include name="minireg1"></include>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day14_testNGFramework"></package>
+            <package name="tests.day15_SoftAssert"></package>
+        </packages>
+    </test>
+</suite>
