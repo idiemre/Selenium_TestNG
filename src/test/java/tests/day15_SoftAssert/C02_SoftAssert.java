@@ -32,7 +32,7 @@ public class C02_SoftAssert {
         //(dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"
 
 
-    @Test(groups = "minireg1")
+    @Test(groups = {"minireg1","minireg2"})
     public void test01(){
         //1. “http://zero.webappsecurity.com/” Adresine gidin
         Driver.getDriver().get("http://zero.webappsecurity.com/");
