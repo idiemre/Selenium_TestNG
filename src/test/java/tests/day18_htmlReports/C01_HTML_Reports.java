@@ -13,7 +13,7 @@ import java.security.Key;
 public class C01_HTML_Reports extends TestBaseRapor {
 
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException {
 
         extentTest=extentReports.createTest("Nutella testi","kullanici amazonda nutella arayabilmeli");
 
